@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 M2U1</title>
+</head>
+<body>
+
+    <textarea name="" id="caracteres" cols="30" rows="10"></textarea>
+    <div>caracteres: <output id="contador"></output> </div>
+ 
+<script>
+
+const caracteres = document.getElementById('caracteres');
+const contar = document.getElementById('contador');
+
+caracteres.addEventListener('input', function() {
+    contar.textContent = caracteres.value.length;
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .caja {
+            display: inline-block;
+            margin-right: 20px;
+            width: 100px;
+            height: 100px;
+        }
+        .caja:first-child{
+            background: red;
+        }
+        .caja:nth-child(2){
+            background: green;
+        }
+        .caja:nth-child(3){ 
+            background: blue;
+        }
+        .btn{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="caja"  onclick="cambiarColor('red')"></div>
+    <div class="caja"  onclick="cambiarColor('green')"></div>
+    <div class="caja"  onclick="cambiarColor('blue')"></div>
+
+    <!-- Botón para restablecer -->
+    <div class="btn">
+        <button id="reset">Restablecer</button>
+    </div>
+
+<script>
+    // Función para cambiar el color del body al hacer clic en una caja
+    function cambiarColor(color) {
+        document.body.style.backgroundColor = color;
+    }
+
+    // Agregar un listener de clic al botón de restablecer
+    document.getElementById('reset').addEventListener('click', function() {
+        // Restablecer el color de fondo del body a blanco
+        document.body.style.backgroundColor = 'white';
+    });
+</script>
+
+</body>
+</html>
